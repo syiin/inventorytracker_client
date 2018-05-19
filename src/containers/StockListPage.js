@@ -52,14 +52,14 @@ class StockListPage extends React.Component {
     event.preventDefault();
     let stockitems = this.state.stockitems;
     forwardToken();
-    const path = `${pathString}/categories/${event.target.name}`;
+    const path = `${pathString}/api/categories/${event.target.name}`;
     const itemsByCat = apiCall("GET", path).then(res => {
       this.setState({ stockitems: res.items });
     });
   };
 
   componentDidMount() {
-    const path = `${pathString}/allstockitems`;
+    const path = `${pathString}/api/allstockitems`;
     forwardToken();
     const getItems = apiCall("GET", path).then(res => {
       const sortItems = res.sort((a, b) => {
