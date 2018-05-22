@@ -1,3 +1,7 @@
+The client component of a browser-based inventory management system built off MongoDB, Express, React JS and NodeJS. 
+
+This acts as a bare template that can be easily expanded into a prototype system. There should be a decent balance between immediate readability and scalability ( in my opinion anyway) - the client section can be found here: https://github.com/syiin/inventorytracker_server/
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
