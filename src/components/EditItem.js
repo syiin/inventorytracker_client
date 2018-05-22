@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from "prop-types";
 import { Card } from "material-ui/Card";
 import RaisedButton from "material-ui/RaisedButton";
 import TextField from "material-ui/TextField";
@@ -93,3 +93,13 @@ const EditItem = ({
 };
 
 export default EditItem;
+
+EditItem.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onCheck: PropTypes.func.isRequired,
+  onDelete: PropTypes.func.isRequired,
+  loadedItem: PropTypes.object.isRequired,
+  onAdmin: PropTypes.bool.isRequired,
+  categories: PropTypes.array.isRequired
+};

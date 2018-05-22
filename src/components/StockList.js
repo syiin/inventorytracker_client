@@ -1,6 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
 import moment from "moment";
-
 import { List } from "material-ui/List";
 import { ListItem } from "material-ui/List";
 import { Card } from "material-ui/Card";
@@ -78,3 +78,12 @@ export const StockList = ({
 };
 
 export default StockList;
+
+StockList.propTypes = {
+  stockitems: PropTypes.array.isRequired,
+  onChange: PropTypes.func.isRequired,
+  filterList: PropTypes.func.isRequired,
+  itemClicked: PropTypes.func.isRequired,
+  updateItem: PropTypes.func.isRequired,
+  successMessage: PropTypes.string
+};

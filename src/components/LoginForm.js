@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Card } from "material-ui/Card";
 import RaisedButton from "material-ui/RaisedButton";
 import TextField from "material-ui/TextField";
@@ -34,3 +35,8 @@ const LoginForm = ({ onChange, onSubmit }) => {
 };
 
 export default LoginForm;
+
+LoginForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired
+};

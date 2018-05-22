@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from "prop-types";
 import { Card } from "material-ui/Card";
 import RaisedButton from "material-ui/RaisedButton";
 import TextField from "material-ui/TextField";
@@ -16,7 +16,6 @@ const StockItem = ({ onChange, onSubmit, onCheck, categories }) => {
             name="name"
             placeholder="Stock Item Name"
             onChange={onChange}
-            // value={loadedItem.name}
           />
         </div>
 
@@ -26,7 +25,6 @@ const StockItem = ({ onChange, onSubmit, onCheck, categories }) => {
             name="amount"
             placeholder="Stock Item Amount"
             onChange={onChange}
-            // value={loadedItem.amount}
           />
         </div>
 
@@ -36,7 +34,6 @@ const StockItem = ({ onChange, onSubmit, onCheck, categories }) => {
             name="unit"
             placeholder="Units (eg. kg/lbs)"
             onChange={onChange}
-            // value={loadedItem.unit}
           />
         </div>
         <h2>Categories</h2>
@@ -62,3 +59,10 @@ const StockItem = ({ onChange, onSubmit, onCheck, categories }) => {
 };
 
 export default StockItem;
+
+StockItem.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onCheck: PropTypes.func.isRequired,
+  categories: PropTypes.array.isRequired
+};

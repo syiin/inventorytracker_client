@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import { Card } from "material-ui/Card";
 import RaisedButton from "material-ui/RaisedButton";
@@ -50,3 +51,8 @@ const SignUpForm = ({ onChange, onSubmit }) => {
 };
 
 export default SignUpForm;
+
+SignUpForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired
+};
